@@ -8,7 +8,7 @@ export default defineNuxtConfig({
       htmlAttrs: {
         lang: 'pt-br'
       },
-      title: 'Nuxt 3 Scaffolding'
+      title: 'EadPisa - Cursos de Tecnologia'
     }
   },
   // Read more about Nuxt Layers
@@ -20,6 +20,7 @@ export default defineNuxtConfig({
   ],
   components: {
     dirs: [
+      { path: '~/components/widgets/', pathPrefix: false },
       '~/components'
     ]
   },
@@ -65,24 +66,20 @@ export default defineNuxtConfig({
       // Add options for Google Fonts
       // https://google-fonts.nuxtjs.org/options
       families: {
-        'Open+Sans': [300, 400, 600, 700]
+        Lato: [300, 400, 700]
       }
     }],
     ['@nuxtjs/html-validator', {
       // Add custom options for HTML-Validator
       // https://html-validator.nuxtjs.org/#configuration-optional
       // https://html-validate.org/rules/index.html
-      usePrettier: true,
+      // usePrettier: true,
       logLevel: 'warning',
       options: {
         rules: {
           'no-dup-class': 'off' // Avoid error for classes using [ ] notation
         }
       }
-    }],
-    ['@nuxtjs/robots', {
-      // add robots config here
-      // https://github.com/nuxt-community/robots-module#robots-config
     }],
     ['@nuxt/image-edge', {
       // add nuxt-image config here
@@ -99,10 +96,6 @@ export default defineNuxtConfig({
     ['nuxt-purgecss', {
       // Add purgecss options
       // https://purgecss.com/guides/nuxt.html#options
-    }],
-    ['@nuxtjs/web-vitals', {
-      // Add custom config
-      // https://github.com/nuxt-modules/web-vitals#options
     }],
     ['nuxt-icon', {
       // Add custom options for NuxtIcon
