@@ -20,7 +20,7 @@ export default defineNuxtConfig({
   ],
   components: {
     dirs: [
-      { path: '~/components/widgets/', pathPrefix: false },
+      { path: '~/components/widgets/', pathPrefix: false, prefix: 'W' },
       '~/components'
     ]
   },
@@ -84,6 +84,7 @@ export default defineNuxtConfig({
     ['@nuxt/image-edge', {
       // add nuxt-image config here
       // https://v1.image.nuxtjs.org/configuration
+      dir: 'assets/images'
     }],
     ['@vueuse/nuxt', {
       // No options, but see the section Caveats for further info

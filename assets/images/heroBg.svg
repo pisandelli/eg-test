@@ -1,0 +1,22 @@
+<svg version="1.1" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <linearGradient id="a" x1=".98627" x2="1915.7" y1="1076.6" y2="4.5125" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#5b58de" offset="0"/>
+   <stop stop-color="#ed00ff" offset="1"/>
+  </linearGradient>
+  <filter id="b" x="-.0029441" y="-.0029441" width="1.0075" height="1.0075" color-interpolation-filters="sRGB">
+   <feFlood flood-color="rgb(0,0,0)" flood-opacity=".49804" result="flood"/>
+   <feComposite in="flood" in2="SourceGraphic" operator="in" result="composite1"/>
+   <feGaussianBlur in="composite1" result="blur" stdDeviation="3"/>
+   <feOffset dx="4" dy="4" result="offset"/>
+   <feComposite in="SourceGraphic" in2="offset" result="composite2"/>
+  </filter>
+  <clipPath id="c">
+   <rect width="1920" height="1080" stroke-width="2.0503" style="mix-blend-mode:normal"/>
+  </clipPath>
+ </defs>
+ <g clip-path="url(#c)">
+  <rect width="1920" height="1080" fill="url(#a)" stroke-width="2.0503" style="mix-blend-mode:overlay"/>
+  <circle transform="matrix(1.2002 0 0 1.2002 1.2605 48.635)" cx="-73.591" cy="1015.7" r="1222.8" fill="#fff" fill-opacity=".28937" filter="url(#b)" stroke-width="1.1028" style="mix-blend-mode:overlay"/>
+ </g>
+</svg>
