@@ -19,7 +19,7 @@ const backgroundURL = `url(${backgroundImage})`
 section.hero
   ClusterL(around)
     StackL.info
-      h1.title Treinamentos e cursos online 
+      h1.title Treinamentos e cursos online
       p Aenean eleifend ac sapien ac mollis. Vestibulum in lectus ante. Nunc fringilla, ex nec viverra posuere, nibh nulla euismod justo, in semper tellus purus non ipsum.
       ClusterL
         button.cta Click Here
