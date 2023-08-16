@@ -130,6 +130,11 @@ export default defineNuxtConfig({
 
       fallbackBreakpoint: 'desktop'
     }],
-    '@pinia/nuxt'
+    ['@pinia/nuxt', {
+      autoImports: [
+        'defineStore',
+        'acceptHMRUpdate'
+      ]
+    }]
   ]
 })
