@@ -22,10 +22,10 @@ section.hero
       h1.title Treinamentos e cursos online
       p Aenean eleifend ac sapien ac mollis. Vestibulum in lectus ante. Nunc fringilla, ex nec viverra posuere, nibh nulla euismod justo, in semper tellus purus non ipsum.
       ClusterL
-        button.cta Click Here
-        Input(type='search')
+        button.cta(type='button') Click Here
+        input(type='search')
     .image
-        NuxtImg(src='https://placehold.it/300x450')
+        NuxtImg(src='https://placehold.it/300x450' alt='Hero Image')
 </template>
 
 <style lang="stylus" scoped>

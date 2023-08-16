@@ -1,12 +1,14 @@
 <script lang="ts" setup>
 /**
- * Index Page.
- * @name 'PageIndex'
+ * The default layout.
+ * @name 'DefaultLayout'
  * @version 1.0.0
  */
 </script>
 
 <template lang="pug">
-WHero
-WTrusted
+header
+  p topbar
+main
+  slot
 </template>
