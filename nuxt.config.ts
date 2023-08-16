@@ -105,6 +105,31 @@ export default defineNuxtConfig({
       // Add custom options for vueTransitions
       // https://github.com/MorevM/vue-transitions#usage-with-nuxt
     }],
+    ['nuxt-viewport', {
+      // Define custom viewports
+      // https://github.com/mvrlin/nuxt-viewport#configuration
+      breakpoints: {
+        desktop: 1024,
+        desktopMedium: 1280,
+        desktopWide: 1600,
+
+        mobile: 320,
+        mobileMedium: 375,
+        mobileWide: 425,
+
+        tablet: 768
+      },
+
+      cookieName: 'viewport',
+
+      defaultBreakpoints: {
+        desktop: 'desktop',
+        mobile: 'mobile',
+        tablet: 'tablet'
+      },
+
+      fallbackBreakpoint: 'desktop'
+    }],
     '@pinia/nuxt'
   ]
 })
