@@ -1,8 +1,12 @@
 <script lang="ts" setup>
 /**
  * A switch to Vertical or Horizontal Layout.
- * @name 'HorVer'
+ * This is a child component for CNavigation
+ * @name 'navigation-hor-ver-l'
+ * @alias 'CNavigationHorVerL'
  * @version 1.0.0
+ * @example
+ * <CNavigationHorVerL></CNavigationHorVerL>
  */
 
 defineOptions({

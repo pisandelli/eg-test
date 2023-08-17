@@ -1,8 +1,14 @@
 <script lang="ts" setup>
 /**
  * Company Logo.
- * @name 'Logo'
+ * The color is defined by the custom
+ * property `--logo-color`. You can
+ * change it in you CSS code.
+ * @name 'c-logo'
+ * @alias 'CLogo'
  * @version 1.0.0
+ * @example
+ * <CLogo></CLogo>
  */
 </script>
 

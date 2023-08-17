@@ -1,21 +1,33 @@
 <script lang="ts" setup>
 /**
  * Custom buttons.
- * @name 'Button'
+ * @name 'c-button'
+ * @alias 'CButton'
  * @version 1.0.0
+ * @example
+ * <CButton></CButton>
  *
  * This button accepts modifiers as attributes
  * Supported modifiers are:
  * default, danger, success, warning, info, outlined, text-only, pill
+ *
+ * This component can render a, button or input tags
+ * By default it will render a <button>.
+ * Is important to define the right attributes for
+ * the tag you're using
+ * @example
+ * <CButton type='button' value='myButton'>
+ * @example
+ * <CButton tag='a' to='https://google.com'>
  */
 
-interface PsButton {
+interface CustomButton {
   tag?: 'a' | 'button' | 'input'
   icon?: string
   to?: string
 }
 
-const props = withDefaults(defineProps<PsButton>(), {
+const props = withDefaults(defineProps<CustomButton>(), {
   tag: 'button',
   icon: '',
   to: ''
@@ -43,8 +55,6 @@ component(:is='componentToShow' class='button' v-bind='$attrs')
 </template>
 
 <style lang="stylus" scoped>
-// .icon
-//   padding-inline-end: var(--gap)
 .button
   max-inline-size: max-content
   padding: var(--s0) var(--gap)
@@ -97,7 +107,6 @@ component(:is='componentToShow' class='button' v-bind='$attrs')
 
   &[icon-only]
     color: var(--color-icon-only, var(--color-primary))
-    // background-color: transparent
     padding: .7rem
     box-shadow: none
     line-height: 0

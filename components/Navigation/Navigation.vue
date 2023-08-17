@@ -1,8 +1,11 @@
 <script lang="ts" setup>
 /**
  * Render Horizontal or Vertical Navigation.
- * @name 'navigation'
+ * @name 'c-navigation'
+ * @alias 'CNavigation'
  * @version 1.0.0
+ * @example
+ * <CNavigation></CNavigation>
  */
 
 // Main navigation data
