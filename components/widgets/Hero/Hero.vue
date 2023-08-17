@@ -22,8 +22,8 @@ section.hero
       h1.title Treinamentos e cursos online personalizados
       p Aenean eleifend ac sapien ac mollis. Vestibulum in lectus ante. Nunc fringilla, ex nec viverra posuere, nibh nulla euismod justo, in semper tellus purus non ipsum.
       ClusterL
-        button.cta(type='button') Click Here
-        input(type='search')
+        CButton.cta(tag='a' to='/' accent pill) Matricule-se agora
+        p(class='text:bold') São mais de 700 cursos e seminários
     .image
         NuxtImg(src='heroComposition.svg' alt='Online Education')
 </template>

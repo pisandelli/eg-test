@@ -55,8 +55,9 @@ const mainNavigation = ref([
 .topbar(:class="{'filled' : checkScroll}" ref='topbar')
   CenterL.container
     ClusterL(between)
-      Logo(:class="{'dark': checkScroll}")
-      Navigation(:data='mainNavigation')
+      NuxtLink(to='/')
+        CLogo(:class="{'dark': checkScroll}")
+      CNavigation(:data='mainNavigation')
 </template>
 
 <style lang="stylus" scoped>

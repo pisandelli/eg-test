@@ -34,7 +34,7 @@ const checkVisibility = computed(() => {
 <template lang="pug">
 nav
   ClusterL.main-nav(:class="checkVisibility")
-    NavigationHorVerL.menu(tag='ul' :isVertical="viewport.isLessThan('desktop')")
+    CNavigationHorVerL.menu(tag='ul' :isVertical="viewport.isLessThan('desktop')")
       template(v-for='item in data' :key='item.label')
         li.item: NuxtLink(:to='item.url') {{ item.label }}
       //- button.menuIcon(v-if="viewport.isLessThan('desktop')" to="#" icon-only icon="ion:menu" aria-hidden="true" @click='toggleMenu()')
@@ -57,7 +57,6 @@ nav
         margin-bottom: var(--gap)
 
 .item
-  // font-size: var(--font-size-small)
   text-transform: uppercase
   font-weight: var(--weight-bold)
 

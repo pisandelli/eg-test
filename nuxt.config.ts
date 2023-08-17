@@ -21,7 +21,7 @@ export default defineNuxtConfig({
   components: {
     dirs: [
       { path: '~/components/widgets/', pathPrefix: false, prefix: 'W' },
-      '~/components'
+      { path: '~/components', prefix: 'C' }
     ]
   },
   alias: {
