@@ -11,6 +11,6 @@ StackL(wide)
   WHero
   WTrusted
   CSection.new(title='Destaques')
-    p tabs
+    WTabs
 
 </template>

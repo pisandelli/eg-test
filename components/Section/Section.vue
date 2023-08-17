@@ -16,7 +16,7 @@ const props = defineProps<{
 <template lang="pug">
 section.page-section
   CenterL.container
-    StackL
+    StackL(wide)
       h2.title {{ props.title }}
       slot
 </template>
