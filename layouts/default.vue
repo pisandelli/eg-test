@@ -8,7 +8,7 @@
 
 <template lang="pug">
 header
-  p topbar
+  WTopbar
 main
   slot
 </template>

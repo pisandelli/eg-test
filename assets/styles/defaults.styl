@@ -2,7 +2,7 @@
   --animation-speed: 0.5s
   --border-radius: 0.5rem
   --ratio: 1.5
-  --max-width: 65ch
+  --max-text-width: 65ch
   --gap: 1.5rem
 
   --font-plain: 'Lato', sans-serif
@@ -19,11 +19,11 @@
   --weight-bold: 700
 
   /* MODULAR SCALE */
-  --s-1: calc(var(--s0) / var(--ratio))
-  --s0: 1rem
-  --s1: calc(var(--s0) * var(--ratio))
-  --s2: calc(var(--s1) * var(--ratio))
-  --s3: calc(var(--s2) * var(--ratio))
+  --s-1: calc(var(--s0) / var(--ratio)) // 0.666rem - 10px
+  --s0: 1rem // 16px
+  --s1: calc(var(--s0) * var(--ratio)) // 1.5rem - 24px
+  --s2: calc(var(--s1) * var(--ratio)) // 2.25rem - 36px  
+  --s3: calc(var(--s2) * var(--ratio)) // 3.375rem - 54px
 
   --stack-300: 0
   --stack-400: 10
@@ -40,8 +40,9 @@
   --color-grey-dark: #8C8C8C
   --color-grey-light: #f0f0f0
   --color-neutral: #fbfbfb
-  --color-primary: #597EF7
-  --color-secondary: #F7BD37
+  --color-primary: #5f92d3
+  --color-secondary: #e352b1
+  --color-accent: #ee1696
   --color-success: #34C759
   --color-warning: #FA8C16
 

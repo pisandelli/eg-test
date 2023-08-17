@@ -2,7 +2,7 @@
 /**
  * Homepage's Trusted By bar.
  * It renders a list of company's logo
- * that trust in our courses and trainigs
+ * that trust in our courses and trainings
  * @name 'widgets-trusted'
  * @alias 'WTrusted'
  * @version 1.0.0

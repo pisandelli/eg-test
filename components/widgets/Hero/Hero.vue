@@ -17,15 +17,15 @@ const backgroundURL = `url(${backgroundImage})`
 
 <template lang="pug">
 section.hero
-  ClusterL(around)
+  ClusterL.container(between)
     StackL.info
-      h1.title Treinamentos e cursos online
+      h1.title Treinamentos e cursos online personalizados
       p Aenean eleifend ac sapien ac mollis. Vestibulum in lectus ante. Nunc fringilla, ex nec viverra posuere, nibh nulla euismod justo, in semper tellus purus non ipsum.
       ClusterL
         button.cta(type='button') Click Here
         input(type='search')
     .image
-        NuxtImg(src='https://placehold.it/300x450' alt='Hero Image')
+        NuxtImg(src='heroComposition.svg' alt='Online Education')
 </template>
 
 <style lang="stylus" scoped>
@@ -35,12 +35,20 @@ section.hero
   background-color: var(--color-neutral)
   background-image: v-bind('backgroundURL')
   background-size: cover
+  position: relative
+
+  .container
+    inline-size: 83.5rem
+    position: absolute
+    inset-block-start: 50%
+    inset-inline-start: 50%
+    transform: translate(-50%, -50%)
 
 .info
   color: var(--color-neutral)
-  font-size: var(--font-size-bigger)
+  font-size: var(--font-size-big)
   font-weight: var(--weight-light)
-  max-inline-size: 45%
+  max-inline-size: 48%
 
 .title
   font-size: calc(var(--font-size-huge) * 2)
