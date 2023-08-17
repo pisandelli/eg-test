@@ -25,9 +25,6 @@ section.trusted
 </template>
 
 <style lang="stylus" scoped>
-.trusted
-  padding-block: 2rem
-
 .title
   font-size: var(--font-size-big)
 </style>

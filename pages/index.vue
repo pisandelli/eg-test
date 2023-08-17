@@ -7,6 +7,10 @@
 </script>
 
 <template lang="pug">
-WHero
-WTrusted
+StackL(wide)
+  WHero
+  WTrusted
+  CSection.new(title='Destaques')
+    p tabs
+
 </template>

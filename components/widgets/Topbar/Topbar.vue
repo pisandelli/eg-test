@@ -74,6 +74,7 @@ const mainNavigation = ref([
     --navigation-item__color: var(--color-primary)
     --navigation-item__color--hover: var(--color-accent)
     background-color: var(--color-neutral)
+    _box-shadow()
 
   .container
     --max-width: 83.5rem // 1336px
