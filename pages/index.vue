@@ -8,8 +8,9 @@
 
 <template lang="pug">
 StackL(wide)
-  WHero
-  WTrusted
+  div
+    WHero
+    WTrusted
   CSection.new(title='Destaques')
     WTabs
 

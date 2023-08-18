@@ -22,7 +22,7 @@ BoxL.card(compact borderless title='Formação Frontend - Básico ao Avançado (
           small Matt Murdock
           ClusterL.rates(narrow)
             CRating(:rating='4.3')
-            small: NuxtLink.reviews(to='#') (456.989)
+            small: NuxtLink.reviews(to='#' title='Reviews') (456.989)
         footer.footer
           CenterL(intrinsic)
             CButton(to='/' tag='a' small pill accent) Detalhes

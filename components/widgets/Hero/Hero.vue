@@ -54,4 +54,9 @@ section.hero
   font-size: calc(var(--font-size-huge) * 2)
   font-weight: var(--weight-bold)
   text-shadow: 0 0 4px var(--color-default)
+
+.image
+  width: 50%
+  img
+    width: 100%
 </style>
