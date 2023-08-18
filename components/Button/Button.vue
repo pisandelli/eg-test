@@ -47,15 +47,18 @@ const componentToShow = computed(() => {
 <template lang="pug">
 
 component(:is='componentToShow' class='button' v-bind='$attrs')
-  ClusterL(narrow)
-    .icon(v-if="props.icon")
-      icon(:name="props.icon")
-    slot
+  span.icon(v-if="props.icon")
+    icon(:name="props.icon")
+  slot
 
 </template>
 
 <style lang="stylus" scoped>
 .button
+  display: flex
+  align-items: center
+  justify-content: space-between
+  gap: .5rem
   max-inline-size: max-content
   padding: var(--s0) var(--gap)
   color: var(--color-neutral)

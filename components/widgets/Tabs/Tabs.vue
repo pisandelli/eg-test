@@ -17,14 +17,19 @@ StackL
     CButton(text-only type='button' value='Trilha Fullstack') Trilha Fullstack
     CButton(text-only type='button' value='Desenvolvimento Python') Desenvolvimento Python
   .tab-panel
-    ClusterL
-      CCard
-      CCard
-      CCard
-      CCard
-      CCard
-      CCard
+    StackL
+      ClusterL
+        WCard
+        WCard
+        WCard
+        WCard
+      CenterL
+        CButton(to='/' tag='a' title='Todos os cursos' pill) Ver todos os cursos
 
 </template>
 
-<style lang="stylus" scoped></style>
+<style lang="stylus" scoped>
+.tabs
+  border-bottom: 1px solid var(--color-grey-light)
+  padding-block-end: var(--gap)
+</style>

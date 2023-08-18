@@ -11,4 +11,6 @@ header
   WTopbar
 main
   slot
+footer
+  p Footer
 </template>

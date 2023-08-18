@@ -5,7 +5,7 @@ _square(val)
 
 //Add a box shadow to the element
 _box-shadow($a = 1)
-  box-shadow: 0 3px ($a * 1px) ($a * -2px) rgba(153,153,153, .2), 0 2px ($a * 2px) 0 rgba(153,153,153, .14), 0 1px ($a * 5px) 0 rgba(153,153,153, .12)
+  box-shadow: 0 3px ($a * 1px) ($a * -2px) rgba(0,0,0, .2), 0 2px ($a * 2px) 0 rgba(0,0,0, .14), 0 1px ($a * 5px) 0 rgba(0,0,0, .12)
 
 //Apply CSS transition animation
 _transition()
@@ -17,3 +17,10 @@ _translate()
   transform: translate3d(arguments)
   transition: transform var(--animation-speed, .5s)
   transition-timing-function: cubic-bezier(.7, 0, .3, 1)
+
+//Apply text Ellipsis
+_ellipsis(size)
+  white-space: nowrap
+  width: size
+  overflow: hidden
+  text-overflow: ellipsis
