@@ -13,12 +13,12 @@ import type { NavigationTypes } from 'interfaces/NavigationTypes'
 
 defineProps<{
   data: NavigationTypes[] | undefined
-  stack: boolean
+  stack?: false
 }>()
 </script>
 
 <template lang="pug">
-CNavigationHorVerL.menu(tag='ul' :isVertical="stack")
+CNavigationHorVerL.menu(tag='ul' :stack="stack")
   template(v-for='item in data' :key='item.label')
     li.item: NuxtLink.anchor(:to='item.url' :title='item.label') {{ item.label }}
 </template>

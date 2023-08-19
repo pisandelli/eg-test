@@ -33,5 +33,7 @@ section.trusted
   font-size: var(--font-size-big)
 
 .companies
+  --companies-logo-width: 8rem
+  --companies-logo-height: var(--s2)
   --color-symbol: var(--color-default, #595959)
 </style>

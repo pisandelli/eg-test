@@ -13,16 +13,13 @@ defineOptions({
   inheritAttrs: true
 })
 
-const props = defineProps({
-  isVertical: {
-    type: Boolean,
-    default: false
-  }
-})
+defineProps<{
+  stack: false
+}>()
 </script>
 
 <template lang="pug">
-template(v-if='props.isVertical')
+template(v-if='stack')
   StackL(v-bind='$attrs' compact)
     slot
 template(v-else)

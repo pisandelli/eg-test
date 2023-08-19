@@ -18,13 +18,13 @@ StackL
     CButton(text-only type='button' value='Desenvolvimento Python') Desenvolvimento Python
   .tab-panel
     StackL
-      ClusterL
+      ClusterL(center)
         WCard
         WCard
         WCard
         WCard
       CenterL
-        CButton(to='/' tag='a' title='Todos os cursos' pill) Ver todos os cursos
+        CButton(to='/cursos' tag='a' title='Todos os cursos' pill) Ver todos os cursos
 
 </template>
 

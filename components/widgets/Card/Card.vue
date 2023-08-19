@@ -24,7 +24,7 @@ BoxL.card(compact borderless title='Formação Frontend - Básico ao Avançado (
           small: NuxtLink.reviews(to='#' title='Reviews') (456.989)
       footer.footer
         CenterL(intrinsic)
-          CButton(to='/' tag='a' small pill accent) Detalhes
+          CButton(to='/cursos/234' tag='a' small pill accent) Detalhes
 </template>
 
 <style lang="stylus" scoped>

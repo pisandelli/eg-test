@@ -11,7 +11,7 @@ StackL(wide)
   div
     WHero
     WTrusted
-  CSection.new(title='Destaques')
+  CSection.new(title='Destaques' tag='h2')
     WTabs
 
 </template>
