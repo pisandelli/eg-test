@@ -46,7 +46,7 @@ const componentToShow = computed(() => {
 
 <template lang="pug">
 
-component(:is='componentToShow' class='button' v-bind='$attrs')
+component(:is='componentToShow' :to='props.to' class='button' v-bind='$attrs')
   span.icon(v-if="props.icon")
     icon(:name="props.icon")
   slot
@@ -65,6 +65,7 @@ component(:is='componentToShow' class='button' v-bind='$attrs')
   line-height: 1
   font-weight: var(--weight-bold)
   text-transform: uppercase
+  text-decoration: none
   font-size: var(--font-size-base)
   border-radius: var(--border-radius)
   border: 0
