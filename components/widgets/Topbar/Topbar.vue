@@ -55,7 +55,7 @@ const mainNavigation = ref([
 .topbar(:class="{'filled' : checkScroll}" ref='topbar')
   CenterL.container
     ClusterL(between)
-      NuxtLink(to='/')
+      NuxtLink(to='/' aria-label='EadPisa')
         CLogo(:class="{'dark': checkScroll}")
       CNavigation(:data='mainNavigation')
 </template>

@@ -11,21 +11,20 @@
 
 <template lang="pug">
 BoxL.card(compact borderless title='Formação Frontend - Básico ao Avançado (2023)')
-  NuxtLink.anchor(to='/')
-    CLabel.label(color='--color-accent') Mais vendido
-    StackL(compact)
-      .header
-        NuxtImg(src='/courses/9a34d5c8/3569919_3c3c.jpg' format='webp')
-      StackL.wrap
-        .body
-          h3(class='title') Formação Frontend - Básico ao Avançado (2023)
-          small Matt Murdock
-          ClusterL.rates(narrow)
-            CRating(:rating='4.3')
-            small: NuxtLink.reviews(to='#' title='Reviews') (456.989)
-        footer.footer
-          CenterL(intrinsic)
-            CButton(to='/' tag='a' small pill accent) Detalhes
+  CLabel.label(color='--color-accent') Mais vendido
+  StackL(compact)
+    .header
+      NuxtImg(src='/courses/9a34d5c8/3569919_3c3c.jpg' format='webp' alt='Banner - Formação Frontend - Básico ao Avançado (2023)')
+    StackL.wrap
+      .body
+        h3(class='title') Formação Frontend - Básico ao Avançado (2023)
+        small Matt Murdock
+        ClusterL.rates(narrow)
+          CRating(:rating='4.3')
+          small: NuxtLink.reviews(to='#' title='Reviews') (456.989)
+      footer.footer
+        CenterL(intrinsic)
+          CButton(to='/' tag='a' small pill accent) Detalhes
 </template>
 
 <style lang="stylus" scoped>
