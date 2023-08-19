@@ -1,0 +1,17 @@
+.cover-l
+  display: flex
+  flex-direction: column
+  min-block-size: 100vh
+
+  & > :first-child:not(main)
+    margin-block-start: 0
+
+  & > :last-child:not(main)
+    margin-block-end: 0
+
+  & > main
+    margin-block: auto
+
+  & > [class*='page']
+    margin-block-start: calc(86px + 16px)
+    margin-block-end: auto
