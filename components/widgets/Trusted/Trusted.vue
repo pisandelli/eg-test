@@ -16,12 +16,7 @@ section.trusted
   CenterL.container(center-text)
     StackL
       h2.title Confiam em nós
-      ClusterL.companies(narrow around)
-        NuxtImg.logo(src='/trustedBy/box.svg' alt='Box')
-        NuxtImg.logo(src='/trustedBy/eventbrite.svg' alt='Eventbrite')
-        NuxtImg.logo(src='/trustedBy/nasdaq.svg' alt='Nasdaq')
-        NuxtImg.logo(src='/trustedBy/netapp.svg' alt='NetApp')
-        NuxtImg.logo(src='/trustedBy/volkswagen.svg' alt='VolksWagen')
+      CCompanies.companies
 </template>
 
 <style lang="stylus" scoped>
@@ -31,14 +26,12 @@ section.trusted
   background-color: var(--color-grey-light)
 .container
   --max-width: 83.5rem
-.companies
-  list-style-type: none
+
 .title
   font-weight: var(--weight-bold)
   color: var(--color-primary)
   font-size: var(--font-size-big)
 
-.logo
-  opacity: .8
-  block-size: var(--s3)
+.companies
+  --color-symbol: var(--color-default, #595959)
 </style>
