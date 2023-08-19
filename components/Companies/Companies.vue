@@ -11,7 +11,7 @@
 </script>
 
 <template lang="pug">
-ClusterL.companies(narrow around)
+ClusterL.companies(narrow center)
   svg.logo: use(xlink:href='~images/sprites.svg#box' alt='Box')
   svg.logo: use(xlink:href='~images/sprites.svg#eventbrite' alt='Eventbrite')
   svg.logo: use(xlink:href='~images/sprites.svg#nasdaq' alt='Nasdaq')
@@ -25,7 +25,7 @@ ClusterL.companies(narrow around)
 
 .logo
   opacity: .8
-  width: 9rem
-  height: var(--s3)
+  inline-size: var(--companies-logo-width, 9rem)
+  block-size: var(--companies-logo-height, var(--s3, 3.375rem))
   object-fit: cover
 </style>
