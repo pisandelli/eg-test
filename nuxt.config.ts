@@ -20,7 +20,8 @@ export default defineNuxtConfig({
   ],
   components: {
     dirs: [
-      { path: '~/components/widgets/', pathPrefix: false, prefix: 'W' },
+      { path: '~/components/Compositions/', pathPrefix: false },
+      { path: '~/components/Widgets/', pathPrefix: false, prefix: 'W' },
       { path: '~/components', prefix: 'C' }
     ]
   },

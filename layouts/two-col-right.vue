@@ -7,11 +7,18 @@
 </script>
 
 <template lang="pug">
-CCoverL
+CoverL
   header
     WTopbar
   main.page
-    slot
+    CenterL.content
+      SidebarL.right
+        slot
   WFooter
 </template>
-<style lang="stylus" scoped></style>
+<style lang="stylus" scoped>
+.content
+  --sidebar-gap: var(--gap)
+  --sidebar-column-size: 25%
+  --max-width: 83.6rem
+</style>
