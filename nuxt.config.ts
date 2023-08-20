@@ -78,7 +78,8 @@ export default defineNuxtConfig({
       logLevel: 'warning',
       options: {
         rules: {
-          'no-dup-class': 'off' // Avoid error for classes using [ ] notation
+          'no-dup-class': 'off', // Avoid error for classes using [ ] notation
+          'no-deprecated-attr': 'off' // Avoid some attributes conflicts with compositions
         }
       }
     }],
