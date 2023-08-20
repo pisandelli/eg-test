@@ -95,7 +95,7 @@ footer.footer
 <style lang="stylus" scoped>
 .footer
   margin-block-start: calc(var(--gap) * 2)
-  padding: var(--gap)
+  padding-inline: var(--gap)
   background-color: var(--color-primary)
 
   & * + *
@@ -106,6 +106,7 @@ footer.footer
 
 .companies
   --color-symbol: var(--color-neutral)
+  justify-content: end
 
 .footer-menu
   display: block
