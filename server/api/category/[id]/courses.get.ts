@@ -20,11 +20,10 @@ export default eventHandler((event) => {
   }
 
   // Filter courses by category Id
-  // eslint-disable-next-line array-callback-return
-  const courses = Courses.filter((course) => {
-    // Course Object with only necessary
-    // info to fill the card
-    if (course.category_id === +categoryId) {
+  const courses = Courses.filter(course => course.category_id === +categoryId)
+
+    // Return only necessary info for cards
+    .map((course) => {
       return {
         id: course.id,
         category_id: course.category_id,
@@ -35,7 +34,6 @@ export default eventHandler((event) => {
         banner: course.banner,
         feature: course.feature
       }
-    }
-  })
+    })
   return courses
 })

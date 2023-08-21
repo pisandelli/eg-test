@@ -30,13 +30,11 @@ export default eventHandler((event) => {
   })
 
   // Filter all course's syllabus and attach classes
-  // eslint-disable-next-line array-callback-return
-  const syllabus = Syllabus.filter((syll) => {
-    if (syll.course_id === +courseId) {
+  const syllabus = Syllabus.filter(syll => syll.course_id === +courseId)
+    .map((syll) => {
       syll.classes = _findClasses(syll.id)
       return syll
-    }
-  })
+    })
 
   /**
    * Find all classes by syllabus id
