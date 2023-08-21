@@ -6,6 +6,7 @@ export const useCoursesStore = defineStore('CoursesStore', () => {
   // STATES
   const courses = ref(null as CourseTypes[] | null)
   const course = ref(null as CourseTypes | null)
+  const isLoading = ref(true)
 
   // GETTERS
 
@@ -23,14 +24,17 @@ export const useCoursesStore = defineStore('CoursesStore', () => {
 
   // Fetch all courses
   async function fetchAllCourses () {
+    isLoading.value = true
     const response = await coursesServices.getCourses()
     if (!response) {
+      isLoading.value = false
       throw createError({
         statusCode: 400,
         message: 'Could not fetch Courses'
       })
     }
     courses.value = response
+    isLoading.value = false
   }
 
   // Get Course by Category Id
@@ -48,6 +52,7 @@ export const useCoursesStore = defineStore('CoursesStore', () => {
   return {
     courses,
     course,
+    isLoading,
     getCourses,
     getCourse,
     fetchAllCourses,

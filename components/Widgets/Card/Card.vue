@@ -7,24 +7,29 @@
  * @example
  * <WCard></WCard>
  */
+import type CourseTypes from '~/interfaces/api/CourseTypes'
+
+defineProps<{
+  data: CourseTypes
+}>()
 </script>
 
 <template lang="pug">
-BoxL.card(compact borderless title='Formação Frontend - Básico ao Avançado (2023)')
-  CLabel.label(color='--color-accent') Mais vendido
-  StackL(compact)
+BoxL.card(compact borderless :title='data.name')
+  CLabel.label(v-if='data.feature' color='--color-accent') Mais vendido
+  StackL.content(compact)
     .header
-      NuxtImg(src='/courses/9a34d5c8/3569919_3c3c.jpg' format='webp' alt='Banner - Formação Frontend - Básico ao Avançado (2023)')
+      NuxtImg(src='/courses/9a34d5c8/3569919_3c3c.jpg' format='webp' :alt='data.name')
     StackL.wrap
       .body
-        h3(class='title') Formação Frontend - Básico ao Avançado (2023)
-        small Por Matt Murdock
+        h3(class='title') {{  data.name }}
+        small Por {{ data.author }}
         ClusterL.rates(narrow)
-          CRating(:rating='4.3')
-          small: NuxtLink.reviews(to='#' title='Reviews') (456.989)
+          CRating(:rating='data.user_rate')
+          small: NuxtLink.reviews(to='#' title='Reviews') {{ '('+ data.reviews + ')' }}
       footer.footer
         CenterL(intrinsic)
-          CButton(to='/cursos/234' tag='a' small pill accent) Detalhes
+          CButton(:to="'/cursos/' + data.id"  tag='a' small pill accent) Detalhes
 </template>
 
 <style lang="stylus" scoped>
@@ -43,7 +48,8 @@ BoxL.card(compact borderless title='Formação Frontend - Básico ao Avançado (
   &:hover
     .title
       color: var(--color-accent)
-
+.content
+  block-size: 100%
 .title
   font-size: calc(var(--font-size-base) + .1rem)
   font-weight: var(--weight-bold)
@@ -52,6 +58,8 @@ BoxL.card(compact borderless title='Formação Frontend - Básico ao Avançado (
 
 .wrap
   padding-inline: var(--s0)
+  flex-grow: 1
+  justify-content: space-between
 
 .rates
   padding-block-start: var(--s0)

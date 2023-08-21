@@ -9,7 +9,7 @@
  *
  * This button accepts modifiers as attributes
  * Supported modifiers are:
- * default, danger, success, warning, info, outlined, text-only, pill
+ * outlined, text-only, icon-only, disabled, pill
  *
  * This component can render a, button or input tags
  * By default it will render a <button>.
@@ -76,6 +76,8 @@ component(:is='componentToShow' :to='props.to' class='button' v-bind='$attrs')
 
   &:is(:hover, :focus)
     filter: saturate(160%)
+  &.active
+    color: var(--color-icon-only--hover, var(--color-accent))
 
   &[pill]
     --border-radius: 2rem
@@ -106,8 +108,9 @@ component(:is='componentToShow' :to='props.to' class='button' v-bind='$attrs')
     box-shadow: none
     padding: 0
 
-    &:is(:hover, :focus)
-      color: var(--color-text-only--hover, var(--color-accent))
+    &:is(:hover, :focus),
+    &.active
+      color: var(--color-icon-only--hover, var(--color-accent))
 
   &[icon-only]
     color: var(--color-icon-only, var(--color-primary))
