@@ -13,7 +13,10 @@ defineProps<{
   data: Syllabus[]
 }>()
 
+// Active panel
 const active = ref(null as number | null)
+
+// Change the active panel
 function checkActive(id: number) {
   if (active.value === id) {
     active.value = null
@@ -22,6 +25,7 @@ function checkActive(id: number) {
   }
 }
 
+// Check if Class is video or document
 function checkClasseIcon(type) {
   if (type === 'doc') {
     return 'ion:document-text-outline'

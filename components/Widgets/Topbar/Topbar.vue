@@ -57,7 +57,9 @@ const mainNavigation = ref([
     ClusterL(between)
       NuxtLink(to='/' aria-label='EadPisa')
         CLogo(:class="{'dark': checkScroll}")
-      CNavigation(:data='mainNavigation')
+      ClusterL
+        CNavigation(:data='mainNavigation')
+        WUserMenu
 </template>
 
 <style lang="stylus" scoped>
