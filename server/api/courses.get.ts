@@ -20,9 +20,12 @@ export default eventHandler((event) => {
   const allCourses: superCourse[] = []
 
   Categories.forEach((category) => {
+    // Get all courses from category
     const courses = Courses.filter((course) => {
       return course.category_id === category.id
     })
+
+    // Attach courses to category
     allCourses.push({
       id: category.id,
       category_name: category.name,
