@@ -9,15 +9,17 @@
  **/
 
 const props = defineProps<{
-  id: string
+  name: string
 }>()
+
+const slug = useSlugify(props.name)
 </script>
 
 <template lang="pug">
 ClusterL.breadcrumbs(narrow)
   span: NuxtLink(to='/' title='Homepage') Home
   span: NuxtLink(to='/cursos' title='Todos os Cursos') Cursos
-  span {{ id }}
+  span {{ slug }}
 </template>
 
 <style lang="stylus" scoped>

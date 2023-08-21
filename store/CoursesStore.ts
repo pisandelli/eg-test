@@ -39,14 +39,17 @@ export const useCoursesStore = defineStore('CoursesStore', () => {
 
   // Get Course by Category Id
   async function fetchCourseById (courseId: number) {
+    isLoading.value = true
     const response = await coursesServices.getCourseById(courseId)
     if (!response) {
+      isLoading.value = false
       throw createError({
         statusCode: 400,
         message: 'Could not fetch Course'
       })
     }
     course.value = response
+    isLoading.value = false
   }
 
   return {

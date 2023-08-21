@@ -68,11 +68,11 @@ footer.footer
     BoxL(borderless transparent)
       StackL(wide)
         .header
-            ClusterL(between)
-              CLogo.logo
-              ClusterL(narrow)
-                h3 Nós treinamos
-                CCompanies.companies
+          ClusterL(between)
+            CLogo.logo
+            ClusterL(narrow)
+              h3 Nós treinamos
+              CCompanies.companies
         .body
           ClusterL(tag='section' between)
             CNavigation.footer-menu(:stack='true' :data='footerMenu')
