@@ -1,5 +1,8 @@
+import { SyllabusTypes } from './SyllabusTypes'
+
 export type CourseTypes = {
   id: number
+  category_id: number
   name: string
   short_description: string
   author: string
@@ -8,4 +11,5 @@ export type CourseTypes = {
   reviews: string
   banner: string
   feature: boolean
+  syllabus?: SyllabusTypes[]
 }

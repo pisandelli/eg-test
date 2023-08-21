@@ -3,6 +3,7 @@ import { CourseTypes } from 'interfaces/api/CourseTypes'
 export const Courses: CourseTypes[] = [
   {
     id: 11,
+    category_id: 1,
     name: 'Aprendendo HTML',
     short_description: 'Etiam cursus varius blandit. Vivamus efficitur condimentum porta. Morbi rutrum eros a fermentum dignissim. Etiam sed lorem viverra libero malesuada consequat. Fusce vitae lacinia lacus.',
     author: 'Matt Murdock',
@@ -14,6 +15,7 @@ export const Courses: CourseTypes[] = [
   },
   {
     id: 12,
+    category_id: 1,
     name: 'CSS3 do básico ao avançado',
     short_description: 'Donec semper porta venenatis. Duis vulputate elit massa, ac luctus libero dictum vel. Suspendisse vitae quam aliquam, fringilla urna.',
     author: 'Karen Page',
@@ -25,6 +27,7 @@ export const Courses: CourseTypes[] = [
   },
   {
     id: 13,
+    category_id: 1,
     name: 'Aprenda Javascript do iniciante ao avançado',
     short_description: 'Phasellus fringilla, est ac faucibus gravida, orci nisi pulvinar tellus, vel dapibus leo est sed tortor.',
     author: 'Franklin "Foggy" Nelson',
@@ -36,6 +39,7 @@ export const Courses: CourseTypes[] = [
   },
   {
     id: 14,
+    category_id: 1,
     name: 'Evoluindo para o Typescript (2023)',
     short_description: 'Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nunc a dictum sem. Aliquam aliquet, erat a maximus mattis, odio metus porttitor ipsum, id elementum metus felis in turpis. Phasellus pharetra quis.',
     author: 'Kirsten McDuffie',
@@ -47,6 +51,7 @@ export const Courses: CourseTypes[] = [
   },
   {
     id: 21,
+    category_id: 2,
     name: 'Arquitetura de software',
     short_description: 'Cras tempor eget diam vitae blandit. Duis cursus dignissim justo, sit amet facilisis turpis scelerisque non.',
     author: 'Wilson Fisk',
@@ -58,6 +63,7 @@ export const Courses: CourseTypes[] = [
   },
   {
     id: 22,
+    category_id: 2,
     name: 'Banco de Dados relacionais',
     short_description: 'Phasellus imperdiet a libero non fringilla. Mauris congue efficitur ullamcorper. Sed sit amet blandit nisi, eu sagittis risus. Ut.',
     author: 'Peter Parker',
@@ -69,6 +75,7 @@ export const Courses: CourseTypes[] = [
   },
   {
     id: 23,
+    category_id: 2,
     name: 'Teoremas do MongoDB',
     short_description: 'Aliquam vehicula neque leo, ac facilisis nulla varius id. Curabitur sit amet nisi metus. Nulla facilisi.',
     author: 'Peter Parker',
@@ -80,6 +87,7 @@ export const Courses: CourseTypes[] = [
   },
   {
     id: 24,
+    category_id: 2,
     name: 'Java para profisisonais de TI',
     short_description: 'Aliquam vehicula neque leo, ac facilisis nulla varius id. Curabitur sit amet nisi metus. Nulla facilisi.',
     author: 'Miles Morales',
@@ -91,6 +99,7 @@ export const Courses: CourseTypes[] = [
   },
   {
     id: 31,
+    category_id: 3,
     name: 'Fundamentos de DevOps',
     short_description: 'Integer molestie augue non mi elementum dignissim. Aliquam sit amet ante rutrum, condimentum nulla id, vestibulum metus. Suspendisse nec.',
     author: 'Miles Morales',
@@ -102,6 +111,7 @@ export const Courses: CourseTypes[] = [
   },
   {
     id: 32,
+    category_id: 3,
     name: 'DevOps Avançado sem complicações',
     short_description: 'Vivamus cursus diam in vulputate semper. Cras pellentesque dui id purus pulvinar dignissim. Donec sed sollicitudin justo. Nunc euismod diam quis gravida pellentesque.',
     author: 'Miles Morales',
@@ -113,6 +123,7 @@ export const Courses: CourseTypes[] = [
   },
   {
     id: 33,
+    category_id: 3,
     name: 'Dominando VueJs com Nuxt3',
     short_description: 'Donec sed sollicitudin justo. Nunc euismod diam quis gravida pellentesque. Etiam nec est a sapien varius lobortis. Nam consequat posuere dolor, ut.',
     author: 'Kitty Pride',
@@ -124,6 +135,7 @@ export const Courses: CourseTypes[] = [
   },
   {
     id: 34,
+    category_id: 3,
     name: 'AWS na prática (2023)',
     short_description: 'Praesent ultrices tristique tellus eu rhoncus. Maecenas mattis, mauris sit amet finibus commodo, erat orci.',
     author: 'Norman Osborn',
@@ -135,6 +147,7 @@ export const Courses: CourseTypes[] = [
   },
   {
     id: 41,
+    category_id: 4,
     name: 'Introdução à segurança da Informação',
     short_description: 'Nam sed efficitur quam, eu cursus ipsum. Sed condimentum, velit dapibus ultrices luctus, leo enim tincidunt neque, sed tincidunt velit mi eu mi.',
     author: 'Reed Richards',
@@ -146,6 +159,7 @@ export const Courses: CourseTypes[] = [
   },
   {
     id: 42,
+    category_id: 4,
     name: 'Pentest na prática - Stealth Mode',
     short_description: 'Nunc varius, orci eleifend convallis rutrum, odio nulla finibus dui, a commodo massa augue non diam.',
     author: 'Sue Storm Richards',
@@ -157,6 +171,7 @@ export const Courses: CourseTypes[] = [
   },
   {
     id: 43,
+    category_id: 4,
     name: 'Criando uma infraestrutura robusta',
     short_description: 'Integer vestibulum sed quam sed lacinia. Nullam sagittis tristique tellus at tempor. Duis vitae erat maximus, aliquam tortor varius, condimentum ipsum. Curabitur ut scelerisque metus.',
     author: 'Ben Grimm',
@@ -168,6 +183,7 @@ export const Courses: CourseTypes[] = [
   },
   {
     id: 44,
+    category_id: 4,
     name: 'Firewalls e IA - Futuro',
     short_description: 'Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce volutpat lectus sed ultrices fermentum. Curabitur ultrices leo eu velit sagittis, in bibendum tortor consequat.',
     author: 'Jhonny Storm',
