@@ -1,5 +1,5 @@
-import CourseTypes from 'interfaces/api/CourseTypes'
-import CoursesServices from 'services/CoursesServices'
+import CourseTypes from '~/interfaces/api/CourseTypes'
+import CoursesServices from '~/services/CoursesServices'
 const coursesServices = new CoursesServices()
 
 export const useCoursesStore = defineStore('CoursesStore', () => {
