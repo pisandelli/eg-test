@@ -1,4 +1,4 @@
-import { ClassTypes } from 'interfaces/api/ClassTypes'
+import ClassTypes from 'interfaces/api/ClassTypes'
 
 export const Classes: ClassTypes[] = [
   {

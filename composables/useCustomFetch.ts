@@ -8,5 +8,5 @@
 
 export async function useCustomFetch (path: string) {
   const config = useRuntimeConfig()
-  return await useFetch(`${config.public.API_BASE}/${path}`)
+  return await $fetch(`${config.public.API_BASE}/${path}`)
 }

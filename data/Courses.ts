@@ -1,4 +1,4 @@
-import { CourseTypes } from 'interfaces/api/CourseTypes'
+import CourseTypes from 'interfaces/api/CourseTypes'
 
 export const Courses: CourseTypes[] = [
   {

@@ -1,4 +1,4 @@
-<script lang="ts" setup>
+<!-- <script lang="ts" setup>
 /**
  * Render Horizontal or Vertical Navigation.
  * @name 'c-navigation'
@@ -9,7 +9,7 @@
  */
 
 // Main navigation data
-import type { NavigationTypes } from 'interfaces/NavigationTypes'
+import NavigationTypes from '~/interfaces/NavigationTypes'
 
 defineProps<{
   data: NavigationTypes[] | undefined
@@ -78,4 +78,4 @@ nav
   list-style: none
   &Icon
     font-size: var(--font-size-huge)
-</style>
+</style> -->

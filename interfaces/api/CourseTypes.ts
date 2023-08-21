@@ -1,6 +1,6 @@
-import { SyllabusTypes } from './SyllabusTypes'
+import SyllabusTypes from './SyllabusTypes'
 
-export type CourseTypes = {
+export default interface CourseTypes {
   id: number
   category_id: number
   name: string

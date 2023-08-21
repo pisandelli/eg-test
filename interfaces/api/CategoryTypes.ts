@@ -1,4 +1,4 @@
-export type CategoryTypes = {
+export default interface CategoryTypes {
   id: number
   name: string
 }

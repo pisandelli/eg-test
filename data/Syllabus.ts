@@ -1,4 +1,4 @@
-import { SyllabusTypes } from 'interfaces/api/SyllabusTypes'
+import SyllabusTypes from 'interfaces/api/SyllabusTypes'
 
 export const Syllabus: SyllabusTypes[] = [
   {

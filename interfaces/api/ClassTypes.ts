@@ -1,4 +1,4 @@
-export type ClassTypes = {
+export default interface ClassTypes {
   id: number
   syllabus_id: number
   course_id: number

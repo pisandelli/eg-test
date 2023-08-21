@@ -8,7 +8,7 @@ import { Courses } from '~/data/Courses'
 import { Categories } from '~/data/Categories'
 
 // Get Types
-import { CourseTypes } from 'interfaces/api/CourseTypes'
+import CourseTypes from 'interfaces/api/CourseTypes'
 
 type superCourse = {
   id: number

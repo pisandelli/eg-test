@@ -10,7 +10,7 @@ import { Syllabus } from '~/data/Syllabus'
 import { Classes } from '~/data/Classes'
 
 // Get Types
-import { ClassTypes } from 'interfaces/api/ClassTypes'
+import ClassTypes from 'interfaces/api/ClassTypes'
 
 export default eventHandler((event) => {
   // Get Category Id from route

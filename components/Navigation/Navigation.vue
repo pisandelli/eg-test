@@ -8,8 +8,7 @@
  * <CNavigation></CNavigation>
  */
 
-// Main navigation data
-import type { NavigationTypes } from 'interfaces/NavigationTypes'
+import type { NavigationTypes } from '~/interfaces/NavigationTypes'
 
 defineProps<{
   data: NavigationTypes[] | undefined

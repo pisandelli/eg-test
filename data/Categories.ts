@@ -1,4 +1,4 @@
-import type { CategoryTypes } from 'interfaces/api/CategoryTypes'
+import CategoryTypes from 'interfaces/api/CategoryTypes'
 export const Categories: CategoryTypes[] = [
   {
     id: 1,
