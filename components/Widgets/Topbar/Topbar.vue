@@ -72,6 +72,7 @@ const checkScroll = computed(() => {
     --navigation-item__bg--hover: transparent
     --navigation-item__color: var(--color-primary)
     --navigation-item__color--hover: var(--color-accent)
+    --color-userMenu: var(--color-primary)
     background-color: var(--color-neutral)
     _box-shadow()
 
