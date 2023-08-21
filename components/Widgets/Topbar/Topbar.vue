@@ -13,6 +13,17 @@
 // https://vueuse.org/
 import { useWindowScroll } from '@vueuse/core'
 
+import { storeToRefs } from 'pinia'
+import { useGlobalStore } from '~/store/GlobalStore'
+const globalStore = useGlobalStore()
+
+const { navigation } = storeToRefs(globalStore)
+
+onMounted(async () => {
+  // Get main navigation from API
+  await globalStore.fetchMainNavigation()
+})
+
 /**
  * Retrieve topbar offsetHeight
  * to be used on scroll event
@@ -32,24 +43,10 @@ onMounted(() => {
  */
 const { y } = useWindowScroll()
 const checkScroll = computed(() => {
-  return y.value > topbarHeight.value
+  const route = useRoute()
+  return (y.value > topbarHeight.value) || route.path !== '/'
 })
 
-// FIXME: Remove dummy data
-const mainNavigation = ref([
-  {
-    label: 'Início',
-    url: '#'
-  },
-  {
-    label: 'Quem somos',
-    url: '#'
-  },
-  {
-    label: 'Cursos',
-    url: '#'
-  }
-])
 </script>
 <template lang="pug">
 .topbar(:class="{'filled' : checkScroll}" ref='topbar')
@@ -58,7 +55,7 @@ const mainNavigation = ref([
       NuxtLink(to='/' aria-label='EadPisa')
         CLogo(:class="{'dark': checkScroll}")
       ClusterL
-        CNavigation(:data='mainNavigation')
+        WMainNav(:data='navigation')
         WUserMenu
 </template>
 

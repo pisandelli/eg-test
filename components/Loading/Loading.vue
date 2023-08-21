@@ -11,11 +11,12 @@
 
 <template lang="pug">
 CenterL(intrinsic)
-  icon.icon(name='ion:reload-circle-outline' size='3rem')
+  icon.icon(name='ion:reload-circle-outline')
 </template>
 
 <style lang="stylus" scoped>
 .icon
+  width: 3rem
   aspect-ratio: 1 / 1
   opacity: .3
   animation: rotate .8s linear infinite

@@ -1,4 +1,4 @@
-<!-- <script lang="ts" setup>
+<script lang="ts" setup>
 /**
  * Render Horizontal or Vertical Navigation.
  * @name 'c-navigation'
@@ -9,11 +9,11 @@
  */
 
 // Main navigation data
-import NavigationTypes from '~/interfaces/NavigationTypes'
+import type { NavigationTypes } from '~/interfaces/NavigationTypes'
 
 defineProps<{
   data: NavigationTypes[] | undefined
-  stack: boolean
+  stack?: boolean
 }>()
 
 // Get current Viewport
@@ -38,7 +38,9 @@ const checkVisibility = computed(() => {
 <template lang="pug">
 nav
   ClusterL.main-nav(:class="checkVisibility")
-    //- CNavigation(:data='data')
+    CNavigationHorVerL.menu(tag='ul' :stack="stack")
+      template(v-for='item in data' :key='item.label')
+        li.item: NuxtLink.anchor(:to='item.url' :title='item.label') {{ item.label }}
     //- button.menuIcon(v-if="viewport.isLessThan('desktop')" to="#" icon-only icon="ion:menu" aria-hidden="true" @click='toggleMenu()')
 </template>
 
@@ -78,4 +80,4 @@ nav
   list-style: none
   &Icon
     font-size: var(--font-size-huge)
-</style> -->
+</style>
