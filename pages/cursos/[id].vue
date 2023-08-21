@@ -53,9 +53,16 @@ BoxL.content(v-else compact)
                 span {{ feature }}
           CenterL
             CButton.cta(tag='a' to='#' accent pill) Matricule-se agora
-    section.description
-      ContentRenderer(:value='data')
-        ContentRendererMarkdown(:value="data")
+    StackL
+      section.description
+        ContentRenderer(:value='data')
+          ContentRendererMarkdown(:value="data")
+      section.syllabus
+        h2 Ementa
+        CSyllabus(:data='course.syllabus')
+
+      CenterL
+        CButton.cta(tag='a' to='#' accent pill) Matricule-se agora
 
 BoxL.sidebar(v-if='!isLoading')
   p sidebar
@@ -101,4 +108,10 @@ BoxL.sidebar(v-if='!isLoading')
     padding-block-end: var(--s1)
     a
       text-decoration: none
+
+.syllabus h2
+  font-size: var(--font-size-huge)
+  font-weight: var(--weight-bold)
+  color: var(--color-default)
+  margin-block-end: var(--gap)
 </style>
