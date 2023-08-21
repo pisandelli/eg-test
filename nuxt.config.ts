@@ -133,11 +133,20 @@ export default defineNuxtConfig({
 
       fallbackBreakpoint: 'desktop'
     }],
+    ['@nuxt/content', {
+      // Add static content
+      // https://content.nuxtjs.org/guide/writing/content-directory
+    }],
     ['@pinia/nuxt', {
       autoImports: [
         'defineStore',
         'acceptHMRUpdate'
       ]
     }]
-  ]
+  ],
+  runtimeConfig: {
+    public: {
+      API_BASE: '/api'
+    }
+  }
 })
