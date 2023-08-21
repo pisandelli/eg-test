@@ -19,7 +19,7 @@ CoverL
 <style lang="stylus" scoped>
 .content
   --sidebar-gap: var(--gap)
-  --sidebar-column-size: 25%
+  --sidebar-column-size: 30%
   --sidebar-content-size: 65ch
   --max-width: 83.6rem
 </style>

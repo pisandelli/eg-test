@@ -1,3 +1,4 @@
+<!-- eslint-disable space-before-function-paren -->
 <script lang='ts' setup>
 /**
  * Accordion Component
@@ -10,7 +11,7 @@
 import type SyllabusTypes from '~/interfaces/api/SyllabusTypes'
 
 defineProps<{
-  data: Syllabus[]
+  data: SyllabusTypes[]
 }>()
 
 // Active panel
@@ -26,7 +27,7 @@ function checkActive(id: number) {
 }
 
 // Check if Class is video or document
-function checkClasseIcon(type) {
+function checkClasseIcon(type: string) {
   if (type === 'doc') {
     return 'ion:document-text-outline'
   } else if (type === 'video') {
@@ -47,7 +48,7 @@ StackL(squeezed)
             ClusterL.item(tag='li' between)
               div.item__link
                 icon(:name='checkClasseIcon(classe.asset_type)')
-                NuxtLink(to='#') {{ classe.name }}
+                NuxtLink(:to="'/class/' + classe.id") {{ classe.name }}
               span {{ classe.duration }}
 </template>
 
@@ -87,6 +88,5 @@ StackL(squeezed)
 
       &:is(:hover, :focus)
         color: var(--color-accent)
-
 
 </style>
