@@ -20,28 +20,28 @@ defineProps<{
 const viewport = useViewport()
 
 // Toggle Menu visibility
-const showMenu = ref(false)
-function toggleMenu() {
-  showMenu.value = !showMenu.value
-}
+// const showMenu = ref(false)
+// function toggleMenu() {
+//   showMenu.value = !showMenu.value
+// }
 
 // Apply classes to menu based on current viewport and visibility
-const checkVisibility = computed(() => {
-  const visible = showMenu.value || viewport.isGreaterOrEquals('desktop')
-  const isVisible = !visible ? 'display:none' : ''
-  const isBox = viewport.isLessThan('desktop') ? 'inBox' : ''
+// const checkVisibility = computed(() => {
+//   const visible = showMenu.value || viewport.isGreaterOrEquals('desktop')
+//   const isVisible = !visible ? 'display:none' : ''
+//   const isBox = viewport.isLessThan('desktop') ? 'inBox' : ''
 
-  return `${isBox} ${isVisible}`
-})
+//   return `${isBox} ${isVisible}`
+// })
 </script>
 
 <template lang="pug">
 nav
-  ClusterL.main-nav(:class="checkVisibility")
+  ClusterL.main-nav
     CNavigationHorVerL.menu(tag='ul' :stack="stack")
       template(v-for='item in data' :key='item.label')
         li.item: NuxtLink.anchor(:to='item.url' :title='item.label') {{ item.label }}
-    //- button.menuIcon(v-if="viewport.isLessThan('desktop')" to="#" icon-only icon="ion:menu" aria-hidden="true" @click='toggleMenu()')
+  //- button.menuIcon(v-if="viewport.isLessThan('desktop')" icon-only icon="ion:menu" aria-hidden="true" @click='toggleMenu()')
 </template>
 
 <style lang="stylus" scoped>

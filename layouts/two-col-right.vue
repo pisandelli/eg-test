@@ -20,6 +20,8 @@ CoverL
 .content
   --sidebar-gap: var(--gap)
   --sidebar-column-size: 25%
-  --sidebar-content-size: 65ch
   --max-width: 83.6rem
+  --sidebar-content-size: 100%
+  @media(min-width: 1024px)
+    --sidebar-content-size: 65ch
 </style>

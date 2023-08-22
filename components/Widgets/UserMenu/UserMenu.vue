@@ -7,6 +7,9 @@
  * @version 1.0.0
 */
 
+// Get current Viewport
+const viewport = useViewport()
+
 // Flag to toggle user menu
 const active = ref(false)
 </script>
@@ -14,10 +17,10 @@ const active = ref(false)
 <template lang="pug">
 .user-menu
   ClusterL(narrow)
-    .select(@click='active = !active')
+    .select(v-if="viewport.isGreaterOrEquals('desktop')" @click='active = !active')
       p.name Matt Murdock
       icon(name='ion:caret-down-outline')
-    CAvatar
+    CAvatar(@click='active = !active')
   BoxL.user-options(v-if='active' compact)
     StackL.list(tag='ul' squeezed @click='active = !active')
       li.item
@@ -45,11 +48,11 @@ const active = ref(false)
 
 .user-options
   position: absolute
-  inline-size: 100%
   inset-block-start: 3rem
   inset-inline-end: 0
   _box-shadow()
-
+  @media(min-width: 1024px)
+    inline-size: 100%
 ul
   list-style-type: none
 

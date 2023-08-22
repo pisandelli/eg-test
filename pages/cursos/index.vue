@@ -29,7 +29,7 @@ article.cursos
 
     template(v-for='category in courses' :key='category.id')
       CSection(:title='category.category_name' tag='h3')
-        ClusterL.list
+        ClusterL.list(center)
           template(v-for='course in category.courses')
             WCard(:data='course')
 </template>

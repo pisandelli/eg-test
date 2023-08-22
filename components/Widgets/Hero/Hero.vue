@@ -8,8 +8,14 @@
  * <WHero></WHero>
  */
 
+// Get current Viewport
+const viewport = useViewport()
+
+const checkIsDesktop = computed(() => {
+  return viewport.isGreaterOrEquals('desktop')
+})
+
 // Set Hero's background image
-// TODO: Add Hero from Mocked API
 const $img = useImage()
 const backgroundImage = $img('/heroBg.svg')
 const backgroundURL = `url(${backgroundImage})`
@@ -24,8 +30,8 @@ section.hero
       ClusterL
         CButton.cta(tag='a' to='/' accent pill) Matricule-se agora
         p(class='text:bold') São mais de 700 cursos e seminários
-    .image
-        NuxtImg(src='heroComposition.svg' alt='Online Education')
+    .image(v-if='checkIsDesktop')
+      NuxtImg(src='heroComposition.svg' alt='Online Education')
 </template>
 
 <style lang="stylus" scoped>
@@ -38,17 +44,19 @@ section.hero
   position: relative
 
   .container
-    inline-size: 83.5rem
     position: absolute
     inset-block-start: 50%
     inset-inline-start: 50%
     transform: translate(-50%, -50%)
+    @media(min-width: 1024px)
+      inline-size: 83.5rem
 
 .info
   color: var(--color-neutral)
   font-size: var(--font-size-big)
   font-weight: var(--weight-light)
-  max-inline-size: 48%
+  @media(min-width: 1024px)
+    max-inline-size: 48%
 
 .title
   font-size: calc(var(--font-size-huge) * 2)

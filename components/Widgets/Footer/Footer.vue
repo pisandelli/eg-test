@@ -8,6 +8,13 @@
  * <WFooter></WFooter>
  */
 
+// Get current Viewport
+const viewport = useViewport()
+
+const checkIsDesktop = computed(() => {
+  return viewport.isGreaterOrEquals('desktop')
+})
+
 const footerMenu = [
   {
     label: 'Todos os cursos',
@@ -70,7 +77,7 @@ footer.footer
         .header
           ClusterL(between)
             CLogo.logo
-            ClusterL(narrow)
+            ClusterL(v-if="checkIsDesktop" narrow)
               h3 Nós treinamos
               CCompanies.companies
         .body
@@ -125,8 +132,9 @@ footer.footer
   border-top: 1px solid #FFFFFF40
 
 .gap
-  --max-width: 75ch
-  inline-size: 50%
+  @media(min-width: 1024px)
+    --max-width: 75ch
+    inline-size: 50%
 .info
   font-size: var(--font-size-big)
   font-weight: var(--weight-light)

@@ -18,6 +18,7 @@ onMounted(async () => {
   const route = useRoute()
   await courseStore.fetchCourseById(+route.params.id)
 })
+
 const { data } = await useAsyncData('doc', () => {
   return queryContent('/cursos').findOne()
 })
@@ -36,7 +37,7 @@ BoxL.content(v-else compact)
     StackL
       CBreadcrumbs(:name='course.name')
       StackL(compact)
-        h2.title {{ course.name }}
+        h1.title {{ course.name }}
         small Criado por {{ course.author }}
         p.short-description {{ course.short_description }}
       ClusterL.rates(narrow)
@@ -65,7 +66,23 @@ BoxL.content(v-else compact)
         CButton.cta(tag='a' to='#' accent pill) Matricule-se agora
 
 BoxL.sidebar(v-if='!isLoading')
-  p sidebar
+  h3.sidebar__header Mais informações
+
+  ul.info__list
+    li.info__item
+      icon(name='ion:checkmark-circle-outline')
+      span  Cras tempus mauris eget
+
+    li.info__item
+      icon(name='ion:checkmark-circle-outline')
+      span  Vestibulum id purus iaculis
+
+    li.info__item
+      icon(name='ion:checkmark-circle-outline')
+      span  Orci varius natoque penatibus
+
+  CenterL(tag='section' intrinsic)
+    CButton.cta(tag='a' to='/cursos' small pill) Outros Cursos
 </template>
 
 <style lang="stylus" scoped>
@@ -95,6 +112,16 @@ BoxL.sidebar(v-if='!isLoading')
   --star-background: var(--color-accent)
 .sidebar
   _box-shadow()
+
+  &__header
+    font-size: 1.3rem
+
+.info
+  &__list
+    margin-block: 1rem
+    list-style-type: none
+  &__item
+    padding-block: 1rem
 
 .short-description
   font-size: calc(var(--font-size-base) + .2rem)
