@@ -1,3 +1,3 @@
 # EG-TEST
 
-This is a studies repo
+This repo is for studies
