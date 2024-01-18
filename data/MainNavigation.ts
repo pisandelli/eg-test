@@ -1,6 +1,6 @@
-import type { NavigationTypes } from '~/interfaces/NavigationTypes'
+import type { Navigation } from 'types/Navigation'
 
-export const MainNavigation: NavigationTypes[] = [
+export const MainNavigation: Navigation[] = [
   {
     label: 'Início',
     url: '/'

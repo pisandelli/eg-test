@@ -10,7 +10,7 @@ import { Syllabus } from '~/data/Syllabus'
 import { Classes } from '~/data/Classes'
 
 // Get Types
-import ClassTypes from 'interfaces/api/ClassTypes'
+import Class from 'types/api/Class'
 
 export default eventHandler((event) => {
   // Get Category Id from route
@@ -41,7 +41,7 @@ export default eventHandler((event) => {
    * @param { number } syllabusId - The Syllabus Id
    * @returns { Array } ClassType[] - All classes for the syllabus
    */
-  function _findClasses (syllabusId: number): ClassTypes[] {
+  function _findClasses (syllabusId: number): Class[] {
     return Classes.filter((theClass) => {
       return theClass.syllabus_id === syllabusId
     })

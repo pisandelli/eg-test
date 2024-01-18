@@ -1,6 +1,6 @@
-import CourseTypes from 'interfaces/api/CourseTypes'
+import Course from 'types/api/Course'
 
-export const Courses: CourseTypes[] = [
+export const Courses: Course[] = [
   {
     id: 11,
     category_id: 1,

@@ -13,7 +13,7 @@
 </script>
 
 <template lang="pug">
-svg.logo: use(xlink:href="~images/sprites.svg#logoPisa")
+svg.logo: use(xlink:href="@/assets/images/sprites.svg#logoPisa")
 </template>
 <style lang="stylus" scoped>
 .logo

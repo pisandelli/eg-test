@@ -1,6 +1,6 @@
-import SyllabusTypes from './SyllabusTypes'
+import Syllabus from './Syllabus'
 
-export default interface CourseTypes {
+export default interface Course {
   id: number
   category_id: number
   name: string
@@ -11,5 +11,5 @@ export default interface CourseTypes {
   reviews: string
   banner: string
   feature: boolean
-  syllabus?: SyllabusTypes[]
+  syllabus?: Syllabus[]
 }

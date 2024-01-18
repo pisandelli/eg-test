@@ -8,10 +8,10 @@
  * <CNavigation></CNavigation>
  */
 
-import type { NavigationTypes } from '~/interfaces/NavigationTypes'
+import type { Navigation } from '~/interfaces/Navigation'
 
 defineProps<{
-  data: NavigationTypes[] | undefined
+  data: Navigation[] | undefined
   stack?: false
 }>()
 </script>

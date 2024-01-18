@@ -1,13 +1,13 @@
-import CourseTypes from '~/interfaces/api/CourseTypes'
-import CategoryTypes from '~/interfaces/api/CategoryTypes'
+import Course from 'types/api/Course'
+import Category from 'types/api/Category'
 import CategoriesServices from '~/services/CategoriesServices'
 const categoriesServices = new CategoriesServices()
 
 export const useCategoriesStore = defineStore('CategoriesStore', () => {
   // STATES
-  const categories = ref([] as CategoryTypes[])
+  const categories = ref([] as Category[])
   const activeCategory = ref(null as number | null)
-  const courses = ref(null as CourseTypes[] | null)
+  const courses = ref(null as Course[] | null)
   const isLoading = ref(true)
 
   // GETTERS

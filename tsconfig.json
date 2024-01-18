@@ -4,6 +4,9 @@
   "vueCompilerOptions": {
     "plugins": [
       "@volar/vue-language-plugin-pug"
-    ]
+    ],
+    "types": [
+      "vitest/globals"
+    ],
   }
 }

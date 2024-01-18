@@ -1,6 +1,6 @@
-import ClassTypes from 'interfaces/api/ClassTypes'
+import Class from 'types/api/Class'
 
-export const Classes: ClassTypes[] = [
+export const Classes: Class[] = [
   {
     id: 1111,
     syllabus_id: 111,

@@ -8,10 +8,10 @@
  * @version 1.0.0
 */
 
-import type SyllabusTypes from '~/interfaces/api/SyllabusTypes'
+import type Syllabus from '~/interfaces/api/Syllabus'
 
 defineProps<{
-  data: SyllabusTypes[]
+  data: Syllabus[]
 }>()
 
 // Active panel

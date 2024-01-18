@@ -1,4 +1,4 @@
-import { NavigationTypes } from '~/interfaces/NavigationTypes'
+import { Navigation } from 'types/Navigation'
 import GlobalServices from '~/services/GlobalServices'
 const globalServices = new GlobalServices()
 
@@ -9,7 +9,7 @@ const globalServices = new GlobalServices()
 export const useGlobalStore = defineStore('GlobalStore', () => {
   // STATE
   const isLoading = ref(false)
-  const navigation = ref(null as NavigationTypes[] | null)
+  const navigation = ref(null as Navigation[] | null)
 
   // GETTERS
   const getMainNavigation = computed(() => {

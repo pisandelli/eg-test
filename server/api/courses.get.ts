@@ -8,12 +8,12 @@ import { Courses } from '~/data/Courses'
 import { Categories } from '~/data/Categories'
 
 // Get Types
-import CourseTypes from 'interfaces/api/CourseTypes'
+import Course from 'types/api/Course'
 
 type superCourse = {
   id: number
   category_name: string
-  courses: CourseTypes[]
+  courses: Course[]
 }
 
 export default eventHandler((event) => {

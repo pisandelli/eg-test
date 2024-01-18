@@ -1,4 +1,4 @@
-export type NavigationTypes = {
+export type Navigation = {
   label: string,
   url: string,
 }

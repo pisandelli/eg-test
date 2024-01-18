@@ -1,6 +1,6 @@
-import SyllabusTypes from 'interfaces/api/SyllabusTypes'
+import Syllabus from 'types/api/Syllabus'
 
-export const Syllabus: SyllabusTypes[] = [
+export const Syllabus: Syllabus[] = [
   {
     id: 111,
     course_id: 11,

@@ -1,11 +1,11 @@
-import CourseTypes from '~/interfaces/api/CourseTypes'
+import Course from 'types/api/Course'
 import CoursesServices from '~/services/CoursesServices'
 const coursesServices = new CoursesServices()
 
 export const useCoursesStore = defineStore('CoursesStore', () => {
   // STATES
-  const courses = ref(null as CourseTypes[] | null)
-  const course = ref(null as CourseTypes | null)
+  const courses = ref(null as Course[] | null)
+  const course = ref(null as Course | null)
   const isLoading = ref(true)
 
   // GETTERS
