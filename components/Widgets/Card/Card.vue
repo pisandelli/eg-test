@@ -7,7 +7,7 @@
  * @example
  * <WCard></WCard>
  */
-import type Course from '~/interfaces/api/Course'
+import type Course from '~/types/api/Course'
 
 defineProps<{
   data: Course

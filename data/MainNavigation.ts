@@ -1,4 +1,4 @@
-import type { Navigation } from 'types/Navigation'
+import type { Navigation } from '~/types/Navigation'
 
 export const MainNavigation: Navigation[] = [
   {

@@ -8,7 +8,7 @@
  * @version 1.0.0
 */
 
-import type Syllabus from '~/interfaces/api/Syllabus'
+import type Syllabus from '~/types/api/Syllabus'
 
 defineProps<{
   data: Syllabus[]

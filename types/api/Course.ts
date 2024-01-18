@@ -1,4 +1,4 @@
-import Syllabus from './Syllabus'
+import type Syllabus from '~/types/api/Syllabus'
 
 export default interface Course {
   id: number

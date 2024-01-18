@@ -1,4 +1,4 @@
-import Class from './Class'
+import type Class from './Class'
 
 export default interface Syllabus {
   id: number
