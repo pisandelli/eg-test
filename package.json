@@ -38,7 +38,7 @@
     "@nuxtjs/html-validator": "^1.5.2",
     "@pinia/nuxt": "^0.4.11",
     "@unlighthouse/nuxt": "^0.10.0",
-    "@vueuse/nuxt": "^10.3.0",
+    "@vueuse/nuxt": "^10.7.2",
     "axios": "^1.4.0",
     "nuxt-icon": "^0.4.2",
     "nuxt-purgecss": "^2.0.0"
